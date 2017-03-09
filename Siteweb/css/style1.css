@@ -1,0 +1,68 @@
+html{
+	background: url("images/background.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	color: white;
+	font-family: "Times New Roman", Times, serif, "sans-serif";
+}
+header{
+	display: block;
+	text-align: center;
+}
+body{
+	text-align: center;
+	display:block;
+	width:90%;
+	height:100%;
+	background:rgba(0,0,0,0.8);
+	margin: auto;
+}
+.center{
+	text-align: center;
+	width: 35%;
+	display: inline-block;
+	vertical-align:top;
+}
+.button{
+	border-radius: 10%;
+	padding: 5%;
+}
+.image{
+	margin: 1%;
+	border: 2px;
+	width: 25%;
+	border-style: solid;
+	border-radius: 5%;
+	display: inline-block;
+	vertical-align: top;
+}
+.text{
+	display: block;
+	text-align: center;
+}
+footer{
+	display:block;
+	text-align: center;
+}
+@media screen and (max-width: 535px){
+	h1{
+		font-size: 1.5em;
+	}
+	.button{
+		width: 100%;
+	}
+	#divConnect{
+		width: 50%;
+		display:block;
+		margin:auto;
+		text-align:center;
+	}
+	.connection{
+		display:block;
+		text-align: center;
+	}
+	.Inputs{
+		width:100%;
+	}
+}
