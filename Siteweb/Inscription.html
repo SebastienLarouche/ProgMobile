@@ -1,25 +1,47 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Inscription MeetLAN</title>
+		<title>Inscription LANMAKER</title>
 		<style>
 		max-width: 100%;
 		height: 100%;
 		</style>
 		<link rel="stylesheet" type="text/css" href="css/style1.css"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<script src="scripts/script1.js"></script>
 	</head>
 	<body>
 	
-		<div class="identification">
-		<p><label> Nom :</label>
-			<input type =" text " name=Nom/>
-		<label> Prenom :</label>
-			<input type =" text " name=Prenom/><br><br>
-		<label> Pseudo :</label>
-			<input type =" text " name=Pseudo/>
-		<label for="login">Adresse courriel :</label>
-			<input type="email" id="login"></p>
-		</div>
+		<header>
+			<img class="image" src="css/images/LAN.png"/>
+			<div class="center">
+				<p>Bienvenu sur la page d'inscription de LANMAKER, ici vous pourrez créé votre compte et choisir vos point d'intéret</p>
+			</div>
+			<img class="image" id="phone" src="css/images/LAN.png"/>
+		</header>
+		
+		<form id=inscription" method="post" action="profil.html" onsubmit="return verifForm(this)" text = "information personelles">
+		
+        <h1>Inscription</h1>
+		
+        <fieldset>
+            <legend>Informations personnelles</legend>
+            <TABLE class="table" BORDER="0">
+			<TR><TH>Pseudo</TH><TH><input type="text" name="pseudo" id="pseudo" placeholder="Pseudo" autofocus onblur="verifPseudo(this)"></TH></TR>
+            <TR><TH>Prenom</TH><TH><input type="text" name="prenom" id="prenom" placeholder="Prenom" autofocus onblur="verifPrenom(this)"></TH></TR>
+			<TR><TH>Nom</TH><TH><input type="text" name="nom" id="nom" placeholder="Nom" autofocus onblur="verifNom(this)"></TH></TR>
+            <TR><TH>Age</TH><TH><input type="text" name="age" id="age" value ="18" style="width:157px" placeholder="Âge" onblur="verifAge(this)"></TH></TR>
+            <TR><TH>Email</TH><TH><input type="text" id="email" name="email" placeholder="example@email.com" onblur="verifEmail(this)"></TH></TR>
+            <TR><TH colspan=2><input type="submit" name="Envoyer" onclick=""></TH></TR>
+			</TABLE>
+        </fieldset>
+		
+		</form>
+		
+		<footer>
+			<P> LANMAKER by Sébastien Larouche et Mathieu-Victor Guérin </p>
+		</footer>
+		
+		<script src="scripts/script1.js"></script>
 	</body>
 </html>

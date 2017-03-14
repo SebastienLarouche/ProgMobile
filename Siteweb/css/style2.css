@@ -1,0 +1,50 @@
+html{
+	background: url("images/background.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	color: white;
+	font-family: "Times New Roman", Times, serif, "sans-serif";
+	height: 100;
+}
+body{
+	text-align: center;
+	display:block;
+	width:90%;
+	height:100%;
+	background:rgba(0,0,0,0.8);
+	margin: auto;
+}
+header{
+	display: block;
+	text-align: center;
+}
+.image{
+	margin: auto;
+	margin-top: 4%;
+	border: 2px;
+	width: 25%;
+	border-style: solid;
+	border-radius: 5%;
+	display: inline-block;
+	vertical-align: top;
+}
+.center{
+	margin-top: 4%;
+	text-align: justify;
+	width: 35%;
+	display: inline-block;
+	vertical-align:top;
+}
+.identification{
+	text-align: center;
+}
+@media screen and (max-width: 535px){
+	#phone{
+		display:none;
+	}
+	.center{
+		margin: auto;;
+		width:60%;
+	}
+}
