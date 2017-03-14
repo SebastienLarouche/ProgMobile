@@ -2,10 +2,6 @@
 <html>
 	<head>
 		<title>Profil LANMAKER</title>
-		<style>
-		max-width: 100%;
-		height: 100%;
-		</style>
 		<link rel="stylesheet" type="text/css" href="css/style1.css"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 		<script src="scripts/script1.js"></script>
@@ -20,7 +16,7 @@
 				<label>Age</label><br>
 				<label>Email</label>
 			</div>
-			<h1 id="t1"> Liste de mes intérêts</h1>
+			<h1> Liste de mes intérêts</h1>
 			<button id="e" type="button" onclick="modifier()">Ajouter</button>
 			<select id="lstCI" type="text" name="pseudo">
 				<option>League of Legends
@@ -42,24 +38,114 @@
 			</ul>
 		</div>
 		
-		<div id="space"><button id="random" onclick="Actualise();">MIX</button></div>
+		<div id="space">
+			<button class="button" onclick="mix();">MIX</button><br><br>
+			<input class="button" type="submit" value="Acceuil" onclick="window.location.href='Acceuil.html'"/>
+		</div>
 		
-		<div class="profil" id="corespondant" style="display:none;">
+		<div class="profil" id="div1" style="display:none;">
 			<img class="picProfil" src="css/images/LAN.png"/>
 			<div class="info">
-				<label>Pseudo<label><br>
-				<label>Prenom</label>
-				<label>Nom</label>
-				<label>Age</label><br>
-				<label>Email</label>
+				<label>Vyktors<label><br>
+				<label>Mathieu-Victor</label>
+				<label>Guérin</label>
+				<label>20</label><br>
+				<label>Vyk_tors@hotmail.com</label>
 			</div>
 				<h1 id="t1">Intérêts du correspondant</h1>
-					<option>League of Legends
-					<option>CS Go
-					<option>Overwatch
-					<option>Minecraft
-					<option>Dofus
-					<option>World of Warcraft
+				<button class="button" id="but">Favoris</button>
+				<option>League of Legends
+				<option>CS Go
+				<option>Overwatch
+		</div >
+		
+		<div class="profil" id="div2" style="display:none;">
+			<img class="picProfil" src="css/images/LAN.png"/>
+			<div class="info">
+				<label>Zyrbak<label><br>
+				<label>Sébastien</label>
+				<label>Larouche</label>
+				<label>20</label><br>
+				<label>Zyr_bak@hotmail.com</label>
+			</div>
+				<h1 id="t1">Intérêts du correspondant</h1>
+				<button class="button" id="but">Favoris</button>
+				<option>League of Legends
+				<option>CS Go
+				<option>Overwatch
+				<option>Minecraft
+				<option>Dofus
+				<option>World of Warcraft
+		</div >
+		
+		<div class="profil" id="div3" style="display:none;">
+			<img class="picProfil" src="css/images/LAN.png"/>
+			<div class="info">
+				<label>WowSuchGame<label><br>
+				<label>Carl</label>
+				<label>Gauthier</label>
+				<label>19</label><br>
+				<label>Such_Game@hotmail.com</label>
+			</div>
+				<h1 id="t1">Intérêts du correspondant</h1>
+				<button class="button" id="but">Favoris</button>
+				<option>League of Legends
+				<option>CS Go
+				<option>Overwatch
+				<option>Minecraft
+				<option>Dofus
+				<option>World of Warcraft
+				<option>Starcraft
+				<option>GuildWars
+		</div >
+		
+		<div class="profil" id="div4" style="display:none;">
+			<img class="picProfil" src="css/images/LAN.png"/>
+			<div class="info">
+				<label>GoatSimulator<label><br>
+				<label>Mathieu</label>
+				<label>Auclair</label>
+				<label>19</label><br>
+				<label>Goat_simul@hotmail.com</label>
+			</div>
+				<h1 id="t1">Intérêts du correspondant</h1>
+				<button class="button" id="but">Favoris</button>
+				<option>League of Legends
+				<option>CS Go
+				<option>Overwatch
+				<option>Minecraft
+				<option>Dofus
+				<option>World of Warcraft
+				<option>Starcraft
+				<option>GuildWars
+				<option>TeamFortress
+				<option>Paladin
+		</div >
+		
+		<div class="profil" id="div5" style="display:none;">
+			<img class="picProfil" src="css/images/LAN.png"/>
+			<div class="info">
+				<label>MartinLuther<label><br>
+				<label>Francis</label>
+				<label>Poirier</label>
+				<label>19</label><br>
+				<label>Martin_Luther@hotmail.com</label>
+			</div>
+				<h1 id="t1">Intérêts du correspondant</h1>
+				<button class="button" id="but">Favoris</button>
+				<option>League of Legends
+				<option>CS Go
+				<option>Overwatch
+				<option>Minecraft
+				<option>Dofus
+				<option>World of Warcraft
+				<option>Starcraft
+				<option>GuildWars
+				<option>TeamFortress
+				<option>Paladin
+				<option>Rainbow six 
+				<option>Diablo
+				<option>For Honor
 		</div >
 		
 		<footer>

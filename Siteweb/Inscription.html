@@ -2,10 +2,6 @@
 <html>
 	<head>
 		<title>Inscription LANMAKER</title>
-		<style>
-		max-width: 100%;
-		height: 100%;
-		</style>
 		<link rel="stylesheet" type="text/css" href="css/style1.css"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 		<script src="scripts/script1.js"></script>
@@ -28,10 +24,14 @@
             <legend>Informations personnelles</legend>
             <TABLE class="table" BORDER="0">
 			<TR><TH>Pseudo</TH><TH><input type="text" name="pseudo" id="pseudo" placeholder="Pseudo" autofocus onblur="verifPseudo(this)"></TH></TR>
-            <TR><TH>Prenom</TH><TH><input type="text" name="prenom" id="prenom" placeholder="Prenom" autofocus onblur="verifPrenom(this)"></TH></TR>
-			<TR><TH>Nom</TH><TH><input type="text" name="nom" id="nom" placeholder="Nom" autofocus onblur="verifNom(this)"></TH></TR>
+			<TR><TH>Password</TH><TH><input type="text" name="pass" id="password" placeholder="password" onblur="verifPassword(this)"></TH></TR>
+			<TR><TH>Confirmer Password</TH><TH><input type="text" name="Cpass" id="Cpassword" placeholder="Cpassword" onblur="CverifPassword(this)"></TH></TR>
+            <TR><TH>Prenom</TH><TH><input type="text" name="pren" id="prenom" placeholder="Prenom" onblur="verifPrenom(this)"></TH></TR>
+			<TR><TH>Nom</TH><TH><input type="text" name="nom" id="nom" placeholder="Nom" onblur="verifNom(this)"></TH></TR>
             <TR><TH>Age</TH><TH><input type="text" name="age" id="age" value ="18" style="width:157px" placeholder="Âge" onblur="verifAge(this)"></TH></TR>
-            <TR><TH>Email</TH><TH><input type="text" id="email" name="email" placeholder="example@email.com" onblur="verifEmail(this)"></TH></TR>
+            <TR><TH>Email</TH><TH><input type="text" name="email" id="email" placeholder="example@email.com" onblur="verifEmail(this)"></TH></TR>
+			<TR><TH><input type="radio" checked id="h" name="genre" value="homme"><label>Homme</label></TH><TH><input type="radio" id="f" name="genre" value="femme"><label>Femme</label></TH></TR>
+			<TR><TH><input type="checkbox" checked="checked"></TH><TH>NewsLetter</TH></TR>
             <TR><TH colspan=2><input type="submit" name="Envoyer" onclick=""></TH></TR>
 			</TABLE>
         </fieldset>

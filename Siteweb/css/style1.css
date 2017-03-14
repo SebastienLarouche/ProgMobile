@@ -6,11 +6,14 @@ html{
 	color: white;
 	font-family: "Times New Roman", Times, serif, "sans-serif";
 	height:100%;
+	max-width: 100%;
 }
+
 header{
 	display: block;
 	text-align: center;
 }
+
 body{
 	text-align: center;
 	display:block;
@@ -20,6 +23,7 @@ body{
 	margin: auto;
 	position: relative;
 }
+
 .center{
 	text-align: center;
 	width: 35%;
@@ -27,10 +31,28 @@ body{
 	vertical-align:top;
 	margin-top: 4%;
 }
+
 .button{
-	border-radius: 10%;
+	background-color: #FF8C00;
+	border: solid 3px white;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	width: 90%;
 	padding: 5%;
 }
+.button:hover{
+	transition: 0.5s;
+	background-color: #fff;
+	color: #FF8C00;
+}
+
+#but{
+	margin-bottom: 15px;
+}
+
 .image{
 	margin: auto;
 	margin-top: 4%;
@@ -41,19 +63,23 @@ body{
 	display: inline-block;
 	vertical-align: top;
 }
+
 .text{
 	margin: auto;
 	width: 90%;
 	display: block;
 	text-align: center;
 }
+
 fieldset{
 	width: 90%;
 	margin: auto;
 }
+
 section{
 	padding-bottom: 50px;
 }
+
 footer{
 	width:100%;
 	display:block;
@@ -61,6 +87,7 @@ footer{
 	position: absolute;
 	bottom: 0px;
 }
+
 footer p{
 	padding-top: 5px;
 	padding-bottom: 5px;
@@ -68,9 +95,11 @@ footer p{
 	margin:auto;
 	width: 90%;
 }
+
 .table{
 	margin: auto;
 }
+
 .picProfil{
 	margin: auto;
 	margin-top: 4%;
@@ -81,15 +110,25 @@ footer p{
 	display: inline-block;
 	vertical-align: top;
 }
+
+#le{
+	margin-top: 20px;
+	padding: 0;
+	padding-top: 25px;
+	text-align: center;
+	list-style-type: none;
+}
+
 #space{
 	display: inline-block;
 	margin:auto;
-	margin-top: 40%;
+	margin-top: 20%;
 	width: 10%;
 	height: 200px;
 }
+
 .profil{
-	height: 550px;
+	height: 650px;
 	vertical-align: top;
 	display: inline-block;
 	margin:auto;
@@ -98,44 +137,49 @@ footer p{
 	min-height: 90%;
 	border: solid 1px;
 }
-.info{
-	
+@media screen and (max-width: 800px){
+	#space{
+		margin-top: 40%;
+	}
 }
-
 @media screen and (max-width: 535px){
 	h1{
 		font-size: 1.5em;
 	}
+	
 	.image{
 		display: none;
 	}
+	
 	.button{
 		width: 100%;
 	}
+	
 	.center{
 		width: 100%;
 	}
+	
 	#divConnect{
 		width: 50%;
 		display:block;
 		margin:auto;
 		text-align:center;
 	}
+	
 	.connection{
 		display:block;
 		text-align: center;
 	}
+	
 	.Inputs{
 		width:100%;
 	}
+	
 	.profil{
 		width: 90%;
 		display: block;
 	}
-	#random{
-		border-radius: 10%;
-		width: 90%;
-	}
+	
 	#space{
 		width: 90%;
 		height: 20px;

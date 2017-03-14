@@ -1,13 +1,9 @@
 var lstli  = document.getElementById("le").getElementsByTagName("li");
-var nbrRandom = Math.floor((Math.random() * 2));
-var picActu = nbrRandom;
-var tab = new Array(5);
-tab = ['1','2','3','4','5'];
-
-
+var nbrRandom = Math.floor((Math.random() * 5) + 1);
+var nbr = nbrRandom;
 Actualise();
 
-
+//affiche la div de connection
 function connect(){
 	if (document.getElementById('divConnect').style.display == "none")
 		document.getElementById('divConnect').style.display = "block";
@@ -15,6 +11,7 @@ function connect(){
 		document.getElementById('divConnect').style.display = "none";
 }
 
+//surligne lors d'un oubli d'élément
 function surligne(champ, erreur) {
     if(erreur)
     champ.style.backgroundColor = "#fba";
@@ -22,6 +19,49 @@ function surligne(champ, erreur) {
     champ.style.backgroundColor = "";
 }
 
+//Vérifie les textes des inputs
+function verifPseudo(champ){
+
+    if(champ.value.length < 2 || champ.value.length > 15)
+    {
+        surligne(champ,true);
+        return false;
+    }
+    else {
+        surligne(champ, false);
+        return true;
+    }
+}
+function verifPassword(champ){
+
+    if(champ.value.length < 2 || champ.value.length > 15)
+    {
+        surligne(champ,true);
+        return false;
+    }
+    else {
+        surligne(champ, false);
+        return true;
+    }
+}
+
+//A AJOUTER
+function CverifPassword(champ){
+	document.getElementById('divConnect')
+	if(champ.value == )
+}
+function verifPrenom(champ){
+
+    if(champ.value.length < 2 || champ.value.length > 15)
+    {
+        surligne(champ,true);
+        return false;
+    }
+    else {
+        surligne(champ, false);
+        return true;
+    }
+}
 function verifNom(champ){
 
     if(champ.value.length < 2 || champ.value.length > 15)
@@ -35,35 +75,10 @@ function verifNom(champ){
     }
 }
 
-function verifPrenom(champ){
-
-    if(champ.value.length < 2 || champ.value.length > 15)
-    {
-        surligne(champ,true);
-        return false;
-    }
-    else {
-        surligne(champ, false);
-        return true;
-    }
-}
-
-function verifPseudo(champ){
-
-    if(champ.value.length < 2 || champ.value.length > 15)
-    {
-        surligne(champ,true);
-        return false;
-    }
-    else {
-        surligne(champ, false);
-        return true;
-    }
-}
-
+//Vérifie l'Email
 function verifEmail(champ) {
 
-    var regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    var regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\0-9]+\.)+[a-zA-Z]{2,}))$/;
 
     if(!regex.test(champ.value)) {
         surligne(champ, true);
@@ -75,6 +90,7 @@ function verifEmail(champ) {
     }
 }
 
+//Vérifir l'âge 
 function verifAge(champ) {
     var age = parseInt(champ.value);
     if(isNaN(age) || age < 18 || age > 35) {
@@ -86,12 +102,15 @@ function verifAge(champ) {
         return true;
     }
 }
-
 function verifForm(f) {
-    var pseudoOk = verifNom(f.nom);
+    var pseudoOk = verifpseudo(f.pseudo);
+	var passOk = verifPassword(f.pass);
+	var nomOk = verifNom(f.nom);
+	var prenOk = verifPrenom(f.pren);
     var mailOk = verifEmail(f.email);
     var ageOk = verifAge(f.age);
-    if(pseudoOk && mailOk && ageOk)
+	console.log(textOk + "" + mailOk + "" + ageOk);
+    if(pseudoOk && passOk && nomOk && prenOk && mailOk && ageOk)
         return true;
     else {
         alert("Veuillez remplir correctement tous les champs");
@@ -119,6 +138,7 @@ for(var i = 0; i< lstli.length; i++)
 {
 	lstli[i].addEventListener("click",change);
 }
+//suprime l'element sur le click
 function change(){
 	this.parentNode.removeChild(this);
 }
@@ -141,9 +161,16 @@ function checkDejaLa()
 //place une div random quand la page est actualisé
 function Actualise()
 {
-	document.getElementById("corespondant").style.display = "none";
-	document.getElementById("corespondant").src = tab[picActu];
-	if (document.getElementById('corespondant').style.display == "none")
-		document.getElementById('corespondant').style.display = "inline-block";
-	
+	document.getElementById("div" + nbrRandom).style.display = "inline-block";
+}
+
+//Cache la div active et en affiche une nouvelle
+function mix()
+{	
+	document.getElementById("div" + nbr).style.display = "none";
+	nbrRandom = Math.floor((Math.random() * 5) + 1);
+	nbr = nbrRandom;
+	console.log(nbrRandom);
+	if (document.getElementById("div" + nbrRandom).style.display == "none");
+		document.getElementById("div" + nbrRandom).style.display = "inline-block";
 }
