@@ -45,11 +45,22 @@ function verifPassword(champ){
     }
 }
 
-//A AJOUTER
 function CverifPassword(champ){
-	document.getElementById('divConnect')
-	if(champ.value == )
+
+    var checkup = document.getElementById('password').value;
+    var Tcheck = champ.value;
+
+    if(Tcheck != checkup)
+    {
+        surligne(champ,true);
+        return false
+    }
+    else {
+        surligne(champ, false);
+        return true;
+    }
 }
+
 function verifPrenom(champ){
 
     if(champ.value.length < 2 || champ.value.length > 15)
@@ -77,7 +88,6 @@ function verifNom(champ){
 
 //Vérifie l'Email
 function verifEmail(champ) {
-
     var regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\0-9]+\.)+[a-zA-Z]{2,}))$/;
 
     if(!regex.test(champ.value)) {
@@ -103,14 +113,14 @@ function verifAge(champ) {
     }
 }
 function verifForm(f) {
-    var pseudoOk = verifpseudo(f.pseudo);
-	var passOk = verifPassword(f.pass);
+	var pseudoOk = verifPseudo(f.pseudo);
 	var nomOk = verifNom(f.nom);
+	var passOk = verifPassword(f.pass);
+	var verifOk = CverifPassword(f.Cpass);
 	var prenOk = verifPrenom(f.pren);
     var mailOk = verifEmail(f.email);
     var ageOk = verifAge(f.age);
-	console.log(textOk + "" + mailOk + "" + ageOk);
-    if(pseudoOk && passOk && nomOk && prenOk && mailOk && ageOk)
+    if(pseudoOk && passOk && verifOk && nomOk && prenOk && mailOk && ageOk)
         return true;
     else {
         alert("Veuillez remplir correctement tous les champs");
@@ -161,16 +171,23 @@ function checkDejaLa()
 //place une div random quand la page est actualisé
 function Actualise()
 {
+	document.getElementById('chat').innerHTML = "";
 	document.getElementById("div" + nbrRandom).style.display = "inline-block";
 }
 
 //Cache la div active et en affiche une nouvelle
 function mix()
 {	
+	document.getElementById("chat").innerHTML = "";
 	document.getElementById("div" + nbr).style.display = "none";
 	nbrRandom = Math.floor((Math.random() * 5) + 1);
 	nbr = nbrRandom;
 	console.log(nbrRandom);
 	if (document.getElementById("div" + nbrRandom).style.display == "none");
 		document.getElementById("div" + nbrRandom).style.display = "inline-block";
+}
+function envoyer()
+{
+    document.getElementById("chat").value = "";
+    document.getElementById("phrase").innerHTML = "Envoyer!";
 }

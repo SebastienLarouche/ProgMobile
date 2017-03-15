@@ -128,7 +128,7 @@ footer p{
 }
 
 .profil{
-	height: 650px;
+	height: 700px;
 	vertical-align: top;
 	display: inline-block;
 	margin:auto;
@@ -136,6 +136,9 @@ footer p{
 	width: 40%;
 	min-height: 90%;
 	border: solid 1px;
+}
+#chat{
+	border: solid 3px white;
 }
 @media screen and (max-width: 800px){
 	#space{
