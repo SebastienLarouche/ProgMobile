@@ -171,23 +171,44 @@ function checkDejaLa()
 //place une div random quand la page est actualisé
 function Actualise()
 {
-	document.getElementById('chat').innerHTML = "";
+	var lstPhrase = document.getElementsByClassName('phrase');
+
+    for(var i = 0; i < lstPhrase.length; i++)
+    {
+        lstPhrase[i].innerHTML = " ";
+    }
 	document.getElementById("div" + nbrRandom).style.display = "inline-block";
 }
 
 //Cache la div active et en affiche une nouvelle
 function mix()
 {	
-	document.getElementById("chat").innerHTML = "";
+	var lstPhrase = document.getElementsByClassName('phrase');
+
+    for(var i = 0; i < lstPhrase.length; i++)
+    {
+        lstPhrase[i].innerHTML = " ";
+    }
 	document.getElementById("div" + nbr).style.display = "none";
 	nbrRandom = Math.floor((Math.random() * 5) + 1);
 	nbr = nbrRandom;
-	console.log(nbrRandom);
 	if (document.getElementById("div" + nbrRandom).style.display == "none");
 		document.getElementById("div" + nbrRandom).style.display = "inline-block";
 }
 function envoyer()
 {
-    document.getElementById("chat").value = "";
-    document.getElementById("phrase").innerHTML = "Envoyer!";
+	
+	var lstChat = document.getElementsByClassName('chat');
+
+    for(var i = 0; i < lstChat.length; i++)
+    {
+        lstChat[i].value = "";
+    }
+
+    var lstPhrase = document.getElementsByClassName('phrase');
+
+    for(var i = 0; i < lstPhrase.length; i++)
+    {
+        lstPhrase[i].innerHTML = "Envoye";
+    }
 }
