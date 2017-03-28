@@ -43,11 +43,6 @@ body{
 	width: 90%;
 	padding: 5%;
 }
-.button:hover{
-	transition: 0.5s;
-	background-color: #fff;
-	color: #FF8C00;
-}
 
 #but{
 	margin-bottom: 15px;

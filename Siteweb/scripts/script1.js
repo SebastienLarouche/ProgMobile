@@ -4,13 +4,6 @@ var nbr = nbrRandom;
 var currentDiv;
 Actualise();
 
-//affiche la div de connection
-/*function connect(){
-	if (document.getElementById('divConnect').style.display == "none")
-		document.getElementById('divConnect').style.display = "block";
-	else
-		document.getElementById('divConnect').style.display = "none";
-}*/
 
 //surligne lors d'un oubli d'élément
 function surligne(champ, erreur) {
@@ -137,7 +130,7 @@ function modifier(){
 		newli.innerHTML = "<li>" + document.getElementById("lstCI").value + "</li>";
 	
 		document.getElementById("le").appendChild(newli);
-		document.getElementById("lstCI").value = ""
+		document.getElementById("lstCI").value = "";
 		
 		for(var i = 0; i< lstli.length; i++)
 		{
