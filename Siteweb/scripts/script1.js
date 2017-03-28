@@ -1,15 +1,16 @@
 var lstli  = document.getElementById("le").getElementsByTagName("li");
 var nbrRandom = Math.floor((Math.random() * 5) + 1);
 var nbr = nbrRandom;
+var currentDiv;
 Actualise();
 
 //affiche la div de connection
-function connect(){
+/*function connect(){
 	if (document.getElementById('divConnect').style.display == "none")
 		document.getElementById('divConnect').style.display = "block";
 	else
 		document.getElementById('divConnect').style.display = "none";
-}
+}*/
 
 //surligne lors d'un oubli d'élément
 function surligne(champ, erreur) {
@@ -177,7 +178,8 @@ function Actualise()
     {
         lstPhrase[i].innerHTML = " ";
     }
-	document.getElementById("div" + nbrRandom).style.display = "inline-block";
+	currentDiv = "div"+nbrRandom;
+	document.getElementById(currentDiv).style.display = "inline-block";
 }
 
 //Cache la div active et en affiche une nouvelle
@@ -192,12 +194,12 @@ function mix()
 	document.getElementById("div" + nbr).style.display = "none";
 	nbrRandom = Math.floor((Math.random() * 5) + 1);
 	nbr = nbrRandom;
-	if (document.getElementById("div" + nbrRandom).style.display == "none");
-		document.getElementById("div" + nbrRandom).style.display = "inline-block";
+	currentDiv = "div"+nbrRandom;
+	if (document.getElementById(currentDiv).style.display == "none");
+		document.getElementById(currentDiv).style.display = "inline-block";
 }
 function envoyer()
 {
-	
 	var lstChat = document.getElementsByClassName('chat');
 
     for(var i = 0; i < lstChat.length; i++)
